@@ -1,0 +1,37 @@
+Automatización de pruebas funcionales 
+
+📄 Breve descripción de la actividad o tarea:
+Este proyecto consistió en diseñar e implementar un conjunto de pruebas automatizadas para validar funcionalidades 
+críticas de una aplicación web , simulando operaciones reales .
+
+⚠️ Desafío principal:
+Garantizar que las pruebas fueran estables y mantenibles frente a cambios en la interfaz, optimizando los tiempos de ejecución y reduciendo el riesgo de falsos positivos.
+
+💡 Solución propuesta:
+Se desarrolló un framework de pruebas basado en Java con Selenium WebDriver y JUnit, aplicando el patrón Page Object Model (POM) para mejorar la mantenibilidad del código.
+Se integró con Maven para la gestión de dependencias .
+
+🛠️ Herramienta técnica utilizada:
+
+Lenguaje: Java
+
+Framework de Testing: JUnit
+
+Automatización Web: Selenium WebDriver
+
+Gestión de dependencias: Maven
+
+Control de versiones: Git / GitHub
+
+📚 Principales aprendizajes alcanzados:
+
+Implementación de POM para separar lógica y localizadores.
+
+Configuración de ejecución paralela para reducir tiempos de prueba.
+
+Integración de pruebas con Jenkins para ejecución continua.
+
+Optimización de aserciones para mejorar la detección de errores.
+
+Este proyecto refleja mi capacidad para diseñar soluciones de automatización orientadas a entornos reales del sector financiero, aplicando buenas prácticas de QA y maximizando la eficiencia del ciclo de pruebas.
+

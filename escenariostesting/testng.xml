@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="EdgeSuite">
+    <test name="EdgeTest">
+        <classes>
+            <class name="com.ejemplo.tests.CrossBrowserEdgeTest"/>
+        </classes>
+    </test>
+</suite>

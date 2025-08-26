@@ -1,0 +1,62 @@
+# Page snapshot
+
+```yaml
+- img "adplus-dvertising"
+- iframe
+- banner:
+  - link:
+    - /url: https://demoqa.com
+    - img
+- img
+- text: Elements
+- img
+- list:
+  - listitem:
+    - img
+    - text: Text Box
+  - listitem:
+    - img
+    - text: Check Box
+  - listitem:
+    - img
+    - text: Radio Button
+  - listitem:
+    - img
+    - text: Web Tables
+  - listitem:
+    - img
+    - text: Buttons
+  - listitem:
+    - img
+    - text: Links
+  - listitem:
+    - img
+    - text: Broken Links - Images
+  - listitem:
+    - img
+    - text: Upload and Download
+  - listitem:
+    - img
+    - text: Dynamic Properties
+- img
+- text: Forms
+- img
+- img
+- text: Alerts, Frame & Windows
+- img
+- img
+- text: Widgets
+- img
+- img
+- text: Interactions
+- img
+- img
+- text: Book Store Application
+- img
+- heading "Buttons" [level=1]
+- button "Double Click Me"
+- button "Right Click Me"
+- button "Click Me"
+- img "Build PlayWright tests with AI"
+- contentinfo: © 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```

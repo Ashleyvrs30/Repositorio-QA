@@ -1,0 +1,153 @@
+# Page snapshot
+
+```yaml
+- img "adplus-dvertising"
+- iframe
+- banner:
+  - link:
+    - /url: https://demoqa.com
+    - img
+- img
+- text: Elements
+- img
+- list:
+  - listitem:
+    - img
+    - text: Text Box
+  - listitem:
+    - img
+    - text: Check Box
+  - listitem:
+    - img
+    - text: Radio Button
+  - listitem:
+    - img
+    - text: Web Tables
+  - listitem:
+    - img
+    - text: Buttons
+  - listitem:
+    - img
+    - text: Links
+  - listitem:
+    - img
+    - text: Broken Links - Images
+  - listitem:
+    - img
+    - text: Upload and Download
+  - listitem:
+    - img
+    - text: Dynamic Properties
+- img
+- text: Forms
+- img
+- img
+- text: Alerts, Frame & Windows
+- img
+- img
+- text: Widgets
+- img
+- img
+- text: Interactions
+- img
+- img
+- text: Book Store Application
+- img
+- iframe
+- heading "Check Box" [level=1]
+- button "Expand all":
+  - img: 
+- button "Collapse all":
+  - img: 
+- list:
+  - listitem:
+    - button "Toggle":
+      - img: 
+    - img: 
+    - img: 
+    - text: Home
+    - list:
+      - listitem:
+        - button "Toggle":
+          - img: 
+        - img: 
+        - img: 
+        - text: Desktop
+        - list:
+          - listitem:
+            - img: 
+            - img
+            - text: Notes
+          - listitem:
+            - img: 
+            - img
+            - text: Commands
+      - listitem:
+        - button "Toggle":
+          - img: 
+        - img: 
+        - img: 
+        - text: Documents
+        - list:
+          - listitem:
+            - button "Toggle":
+              - img: 
+            - img: 
+            - img: 
+            - text: WorkSpace
+            - list:
+              - listitem:
+                - img: 
+                - img
+                - text: React
+              - listitem:
+                - img: 
+                - img
+                - text: Angular
+              - listitem:
+                - img: 
+                - img
+                - text: Veu
+          - listitem:
+            - button "Toggle":
+              - img: 
+            - img: 
+            - img: 
+            - text: Office
+            - list:
+              - listitem:
+                - img: 
+                - img
+                - text: Public
+              - listitem:
+                - img: 
+                - img
+                - text: Private
+              - listitem:
+                - img: 
+                - img
+                - text: Classified
+              - listitem:
+                - img: 
+                - img
+                - text: General
+      - listitem:
+        - button "Toggle":
+          - img: 
+        - img: 
+        - img: 
+        - text: Downloads
+        - list:
+          - listitem:
+            - img: 
+            - img
+            - text: Word File.doc
+          - listitem:
+            - img: 
+            - img
+            - text: Excel File.doc
+- text: "You have selected : desktop notes commands"
+- img "Build PlayWright tests with AI"
+- iframe
+- contentinfo: © 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```

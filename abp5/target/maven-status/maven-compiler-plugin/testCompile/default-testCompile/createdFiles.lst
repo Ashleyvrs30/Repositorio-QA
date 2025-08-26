@@ -1,0 +1,4 @@
+com\ejemplo\StepDefinitions.class
+com\ejemplo\Hooks.class
+com\ejemplo\RunCucumberTest.class
+com\ejemplo\RegistroStepDefinitions.class

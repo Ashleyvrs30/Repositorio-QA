@@ -1,0 +1,18 @@
+{
+  "name": "grupo4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "Grupo 4",
+  "license": "ISC",
+  "description": "Tests automáticos usando Playwright en páginas reales como demoqa.com",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1"
+  }
+}

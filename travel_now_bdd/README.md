@@ -6,6 +6,6 @@ Al escribir los escenarios en **lenguaje Gherkin**, es mucho más fácil visuali
 
 Además, el uso de **hooks** y **tags** ayuda a organizar las pruebas de manera eficiente, mejorando la claridad y el enfoque. Estos elementos no solo permiten que las pruebas sean más estructuradas, sino que también favorecen la comunicación fluida entre los equipos, lo que puede prevenir problemas antes de entrar al código.
 
-En resumen, creo que este tipo de trabajo mejora significativamente la comunicación y reduce la posibilidad de errores, incluso sin tener que tocar el código fuente desde el principio.
+En resumen, creemos que este tipo de trabajo mejora significativamente la comunicación y reduce la posibilidad de errores, incluso sin tener que tocar el código fuente desde el principio.
 
 

@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "fba735f5-f67c-437e-8122-041fb5784b7c",
+		"name": "Leccion4_API_REST_Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49807816",
+		"_collection_link": "https://hugosx360-2803098.postman.co/workspace/aa20c9ca-3273-457c-8be9-cd1e04433796/collection/49807816-fba735f5-f67c-437e-8122-041fb5784b7c?action=share&source=collection_link&creator=49807816"
+	},
+	"item": [
+		{
+			"name": "Crear Usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// verificar código (acepta 200 o 201)\r",
+							"pm.test(\"Status code is 200 or 201\", function () {\r",
+							"    pm.expect([200, 201]).to.include(pm.response.code);\r",
+							"});\r",
+							"\r",
+							"// comprobar que hay JSON y un id; guardarlo en entorno para PUT/DELETE\r",
+							"pm.test(\"Response has id\", function () {\r",
+							"    pm.expect(pm.response.text(), \"response is not empty\").to.not.be.empty;\r",
+							"    let jsonData = {};\r",
+							"    try { jsonData = pm.response.json(); } catch (e) { jsonData = {}; }\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    // guardar id en variable de entorno (siempre guardar en initial via script si querés que Newman lo use después)\r",
+							"    pm.environment.set(\"userId\", jsonData.id);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Hugo\",\r\n  \"lastName\": \"Tester\",\r\n  \"age\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/add",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body contains user data\", function () {\r",
+							"    let jsonData = {};\r",
+							"    try { jsonData = pm.response.json(); } catch (e) { jsonData = {}; }\r",
+							"    // adapta estas propiedades según dummyjson (ej: id, firstName)\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    pm.expect(jsonData).to.have.property('firstName');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains updated user data\", function () {\r",
+							"    let jsonData = {};\r",
+							"    try { jsonData = pm.response.json(); } catch (e) { jsonData = {}; }\r",
+							"    pm.expect(jsonData).to.have.property('id');\r",
+							"    // valida el campo que actualizaste (ej: lastName)\r",
+							"    pm.expect(jsonData).to.have.property('lastName', 'QA_Actualizado');\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"lastName\": \"QA_Actualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// dummyjson responde 200 en delete\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/users/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
